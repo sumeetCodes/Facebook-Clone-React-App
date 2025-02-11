@@ -1,14 +1,14 @@
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LoginPageFileComponent from "./components/loginPage/loginPageFile";
+import LoginPageComponent from "./components/layout/login/loginPageFile";
 
 
 function App() {
 
   return (
     <>
-      
-<LoginPageFileComponent />
+     
+     <h1>Hi</h1>
 
       </>
   )
