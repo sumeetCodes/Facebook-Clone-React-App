@@ -1,6 +1,10 @@
 
 import React from 'react';
-
+import HeaderFileComponent from '../../Header/headerFile';
+import Grid from '@mui/material/Grid2';
+import LeftHomeComponent from "./homeComponents/left/leftHome.jsx"
+import MiddleHomeComponent from './homeComponents/middle/middleHome';
+import RightHomeComponent from './homeComponents/right/rightHome';
 
 const HomeTabComponent = () => {
     
@@ -9,9 +13,36 @@ const HomeTabComponent = () => {
     return (
        <>
 
-      
-    <h1>Home page</h1>   
-       
+<HeaderFileComponent />
+
+<Grid container spacing={2}>
+
+{/* left */}
+<Grid size={{ md: 3 }}>
+
+<LeftHomeComponent />
+
+</Grid>
+
+{/* middle */}
+<Grid size={{ md: 6 }} className="border border-danger">
+
+    <MiddleHomeComponent />
+
+</Grid>
+
+{/* right */}
+<Grid size={{ md: 3 }}>
+
+    <RightHomeComponent />
+
+</Grid>
+
+
+</Grid>
+
+ 
+
 
 
        </>
@@ -19,6 +50,9 @@ const HomeTabComponent = () => {
 };
 
 export default HomeTabComponent;
+
+
+
 
 
 

@@ -1,3 +1,4 @@
+
 import { Box, Button, Card, TextField, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import axios from 'axios';
@@ -14,29 +15,36 @@ const LoginPageComponent = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "",
+      username: "",
       password: "",
     }
   });
 
   const handleLogin = async (data) => {
     try {
-      const response = await axios.get('https://fakestoreapi.com/users');
-      const users = response.data;
+      const response = await axios.post('https://fakestoreapi.com/auth/login', {
+        username: data.username,
+        password: data.password,
+      });
 
-      const user = users.find((user) => user.email === data.email && user.password === data.password);
-
-      if (user) {
+      if (response.status === 200) {
         // handle successful login
-        console.log(user);
+        console.log(response.data);
+        console.log(response.data.token);
+        
+        localStorage.setItem('token', response.data.token);
         navigate('/home');
-      } else {
+      } else if(response.status === 401) {
         // handle failed login
+      alert("Enter correct username or password");
+      }else{
         console.log("wrong");
+        
       }
     } catch (error) {
       // handle errors
-      alert("Sorry, something went wrong")
+      alert("wrong username or password please try again")
+      console.log("Sorry, something went wrong");
       console.log(error);
     }
   };
@@ -50,10 +58,10 @@ const LoginPageComponent = () => {
       <div className='d-flex justify-content-between align-items-center container'
         style={{ height: "100vh" }}>
 
-        <Grid container spacing={3} className=" ">
+        <Grid container spacing={3} className="flex-wrap">
 
           {/* left side */}
-          <Grid size={{ xs: 6, md: 6 }}>
+          <Grid  size={{ xs: 12, md: 6 }}>
             <Box className="mt-5">
 
               <Typography variant='h2' className='fw-bold mt-5' sx={{ color: "#1877f2", }}>
@@ -68,7 +76,7 @@ const LoginPageComponent = () => {
           </Grid>
 
           {/* right side */}
-          <Grid size={{ xs: 6, md: 6 }}>
+          <Grid size={{ xs: 12, md: 6 }}>
 
             <Box>
               <Card className='rounded'>
@@ -77,13 +85,13 @@ const LoginPageComponent = () => {
 
                   <Box className="p-3">
 
-                    {/* email */}
+                    {/* username */}
                     <Box className="my-3">
                       <Controller
-                        name="email"
+                        name="username"
                         control={control}
                         render={({ field }) => <TextField {...field}
-                          id="outlined-basic" label="Email"
+                          id="outlined-basic" label="Username"
                           variant="outlined" fullWidth />
                         }
                       />
