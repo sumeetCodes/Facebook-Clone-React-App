@@ -25,7 +25,7 @@ const HomeTabComponent = () => {
 </Grid>
 
 {/* middle */}
-<Grid size={{ md: 6 }} className="border border-danger">
+<Grid size={{ md: 6 }} className="">
 
     <MiddleHomeComponent />
 
