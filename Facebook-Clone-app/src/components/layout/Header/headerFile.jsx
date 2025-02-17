@@ -38,13 +38,13 @@ const HeaderFileComponent = () => {
 <Box>
 
 {/* Home icon */}
-<Link>
+<Link to="/">
 <HomeOutlinedIcon className='fs-2 mx-2' />
 </Link>
 
 {/* Friends tab icon */}
 
-<Link>
+<Link to="/friends">
 <GroupOutlinedIcon className='fs-2 text-secondary' />
 </Link>
 

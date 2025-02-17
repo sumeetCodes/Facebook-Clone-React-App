@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPageComponent from './components/layout/login/loginPageFile.jsx'
 import HomeTabComponent from './components/layout/Pages/homeTab/homeTabFile.jsx'
 import ProtectedRoute from './components/protectedRoute/protectedRoute.jsx'
+import FriendTabComponent from './components/layout/Pages/friendTab/friendTabFile.jsx'
 
 
 const route = createBrowserRouter([
@@ -22,7 +23,7 @@ const route = createBrowserRouter([
  
 {
    path: "/friends", 
-    element: <h1>Friends</h1>
+    element: <FriendTabComponent />
 },
 
 {

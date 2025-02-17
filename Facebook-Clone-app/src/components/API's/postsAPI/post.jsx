@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Box, Button, Card, Typography } from '@mui/material';
+import { Box, Button, Card, Modal, Typography } from '@mui/material';
+
+
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+
+
+ 
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -19,9 +24,6 @@ const Posts = () => {
 
     fetchPosts();
   }, []);
-
-  
-
 
 
   return (
@@ -46,15 +48,15 @@ const Posts = () => {
 
 <Card>
 
-<Box className="d-flex justify-content-around align-items-center">
+<Box className="d-flex justify-content-around align-items-center mb-3">
 
-  <Button className='text-black mb-3' variant="outlined">
-    Like
-  </Button>
-
-<Button className='text-black mb-3' variant="outlined">
-    comment
-  </Button>
+  <Button variant="outline">
+  like
+</Button>
+ 
+<Button variant="outline">
+  Comment
+</Button>
 
 </Box>
 

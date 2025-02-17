@@ -6,7 +6,7 @@ import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
-import Post from '../../../../../API\'s/postsComment/post';
+import Posts from '../../../../../API\'s/postsAPI/post';
 
 
 const MiddleHomeComponent = () => {
@@ -83,7 +83,7 @@ Create Story
 
 <Box className="mt-4">
 
-<Post />
+<Posts />
 
 </Box>
 
