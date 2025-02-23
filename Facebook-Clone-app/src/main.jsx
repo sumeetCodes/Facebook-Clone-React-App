@@ -5,6 +5,10 @@ import LoginPageComponent from './components/layout/login/loginPageFile.jsx'
 import HomeTabComponent from './components/layout/Pages/homeTab/homeTabFile.jsx'
 import ProtectedRoute from './components/protectedRoute/protectedRoute.jsx'
 import FriendTabComponent from './components/layout/Pages/friendTab/friendTabFile.jsx'
+import ProfilePageFileComponent from './components/layout/Pages/profilePage/profilePageFile.jsx'
+
+
+// Router dom
 
 
 const route = createBrowserRouter([
@@ -28,7 +32,7 @@ const route = createBrowserRouter([
 
 {
    path: "/profile", 
-    element: <h1>Profile</h1>
+    element: <ProfilePageFileComponent />
 },
 
 ]);

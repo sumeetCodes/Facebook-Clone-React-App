@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Button, Card, Modal, Typography } from '@mui/material';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import CommentIcon from '@mui/icons-material/Comment';
 
 
 
@@ -51,11 +53,11 @@ const Posts = () => {
 <Box className="d-flex justify-content-around align-items-center mb-3">
 
   <Button variant="outline">
-  like
+<ThumbUpOffAltIcon className="mx-2" />  like
 </Button>
  
 <Button variant="outline">
-  Comment
+<CommentIcon className="mx-2" />  Comment
 </Button>
 
 </Box>

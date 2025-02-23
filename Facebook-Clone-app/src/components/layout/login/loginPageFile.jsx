@@ -33,7 +33,7 @@ const LoginPageComponent = () => {
         console.log(response.data.token);
         
         localStorage.setItem('token', response.data.token);
-        navigate('/home');
+        navigate('/');
       } else if(response.status === 401) {
         // handle failed login
       alert("Enter correct username or password");
