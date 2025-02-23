@@ -1,6 +1,4 @@
 
-
-
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid2';
 import { Box, Button, Card, TextField, Typography, Modal } from '@mui/material';
@@ -224,5 +222,6 @@ onClick={handleOpen}>
 };
 
 export default CoverPhotoComponent;
+
 
 
