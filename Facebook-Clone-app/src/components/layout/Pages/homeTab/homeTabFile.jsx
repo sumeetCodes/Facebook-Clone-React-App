@@ -18,21 +18,21 @@ const HomeTabComponent = () => {
 <Grid container spacing={2}>
 
 {/* left */}
-<Grid size={{ md: 3 }}>
+<Grid size={{ md: 3, lg:3 }} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
 
 <LeftHomeComponent />
 
 </Grid>
 
 {/* middle */}
-<Grid size={{ md: 6 }} className="">
+<Grid size={{ md: 6, lg:6, xs:12 }} className="">
 
     <MiddleHomeComponent />
 
 </Grid>
 
 {/* right */}
-<Grid size={{ md: 3 }}>
+<Grid size={{ md: 3, lg:3 }} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
 
     <RightHomeComponent />
 

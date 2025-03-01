@@ -17,7 +17,7 @@ const FriendTabComponent = () => {
        <Grid container>
 
 {/* left */}
- <Grid size={{md:4}}>
+ <Grid size={{md:4}} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
 
 <FriendLeftComponent />
 

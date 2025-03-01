@@ -7,11 +7,17 @@ import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import Posts from '../../../../../API\'s/postsAPI/post';
+import { useNavigate } from 'react-router-dom';
 
 
 const MiddleHomeComponent = () => {
     
 
+ const navigate = useNavigate();
+
+    function profileClick () {
+        navigate('/profile')
+    }
 
     return (
        <>
@@ -24,7 +30,7 @@ const MiddleHomeComponent = () => {
 
 
 <Box className="">
-    <AccountCircleIcon className="fs-1 border rounded-circle p-1 me-2" />
+    <AccountCircleIcon onClick={profileClick} className="fs-1 border rounded-circle p-1 me-2" />
 <input type="text" placeholder='What on your mind, User' className='p-2 rounded-pill border border-none w-75 mx-2' />
 </Box>
 

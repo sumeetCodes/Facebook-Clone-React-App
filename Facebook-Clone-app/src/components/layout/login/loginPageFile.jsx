@@ -61,7 +61,7 @@ const LoginPageComponent = () => {
         <Grid container spacing={3} className="flex-wrap">
 
           {/* left side */}
-          <Grid  size={{ xs: 12, md: 6 }}>
+          <Grid  size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             <Box className="mt-5">
 
               <Typography variant='h2' className='fw-bold mt-5' sx={{ color: "#1877f2", }}>

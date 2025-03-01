@@ -94,7 +94,8 @@ const defaultProfilePic = 'https://external-content.duckduckgo.com/iu/?u=https%3
           <Box className="d-flex justify-content-between align-items-center">
             {/* profile name */}
             <Box>
-              <Typography variant="h3" className="fw-bold me-5" style={{ marginLeft: "220px" }}>
+              <Typography variant="h3" className="fw-bold me-5" style={{ marginLeft: "220px" }}
+              sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
                 {username}
               </Typography>
             </Box>
@@ -102,17 +103,23 @@ const defaultProfilePic = 'https://external-content.duckduckgo.com/iu/?u=https%3
             {/* buttons */}
             <Box>
               {/* add story btn */}
-              <Button variant="contained" className="rounded-3 mx-2">
+              <Button variant="contained"
+              style={{ marginTop: '120px' }}
+              className="rounded-3 mx-2 d-sm-block">
                 Add to Story
               </Button>
 
               {/* edit profile button */}
-              <Button variant="contained" className="bg-light text-black rounded-3 mx-2" 
+              <Button variant="contained" 
+               style={{ marginTop: '120px' }}
+              className="bg-light text-black rounded-3 mx-2 d-sm-block" 
 onClick={handleOpen}>
                 Edit Profile
               </Button>
 
-              <Button variant="contained" className="bg-light text-black rounded-2 me-4">
+              <Button variant="contained" 
+              sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
+              className="bg-light text-black rounded-2 me-4">
                 <KeyboardArrowUpIcon />
               </Button>
             </Box>
